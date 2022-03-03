@@ -58,13 +58,18 @@ function upgradeDeck() {
     firstCard = secondCard = "";
     disableCards = false;
 
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+    let images = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
+    images.sort(() => Math.random() > 0.5 ? 1 : -1);
+
+    let past = [1,2,3,4,5,6,7,8]
+    past = Math.floor(Math.random() * past.length);
+
+    let pastNumber = past === 0 ? 1 : past;
 
     cards.forEach((card, index) => {
         card.classList.remove("move");
         let img = card.querySelector("#back");
-        img.src = `./assets/image_${arr[index]}.png`;
+        img.src = `./assets/images_${pastNumber}/image_${images[index]}.png`;
         card.addEventListener("click", moveCard);
     });
 }

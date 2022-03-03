@@ -41,14 +41,14 @@ h1 {
     background-color: var(--dark-blue);
     padding: 1.5rem;
     border-radius: 1rem;
-    width: 520px;
-    height: 520px;
+    width: 500px;
+    height: 500px;
 }
 
 .cards {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     height: 100%;
 }
