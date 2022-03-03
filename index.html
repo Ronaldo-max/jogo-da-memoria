@@ -1,174 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jogo da Memória</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Memoria</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <header>
+            <h1>JOGO DA MEMÓRIA</h1>
 
-<body>
-    <header>
-        <h1>JOGO DA MEMÓRIA</h1>
+            <button id="audio">
+                <img src="./assets/play.png" alt="play" id="play" />
+                <img
+                    src="./assets/pause.png"
+                    alt="pause"
+                    id="pause"
+                    style="display: none"
+                />
+                <audio src="./audio/background.mp3"></audio>
+            </button>
+            <audio>
+                <source src="./audio/background.mp3" type="audio/mp3" />
+            </audio>
+        </header>
+        <main>
+            <section class="container">
+                <ul class="cards">
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_1.png"
+                                alt="image_1"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_2.png"
+                                alt="image_2"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_3.png"
+                                alt="image_3"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_4.png"
+                                alt="image_4"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_5.png"
+                                alt="image_5"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_6.png"
+                                alt="image_6"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_7.png"
+                                alt="image_7"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_8.png"
+                                alt="image_8"
+                                id="back"
+                            />
+                        </div>
+                    </li>
 
-        <button id="audio">
-            <img src="./assets/play.png" alt="play" id="play">
-            <img src="./assets/pause.png" alt="pause" id="pause" style="display: none;">
-            <audio src="./audio/background.mp3"></audio>
-        </button>
-        <audio>
-            <source src="./audio/background.mp3" type="audio/mp3">
-        </audio>
-    </header>
-    <main>
-        <section class="container">
-            <ul class="cards">
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_1.png" alt="image_1" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_2.png" alt="image_2" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_3.png" alt="image_3" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_4.png" alt="image_4" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_5.png" alt="image_5" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_6.png" alt="image_6" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_7.png" alt="image_7" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_8.png" alt="image_8" id="back">
-                    </div>
-                </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_1.png"
+                                alt="image_1"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_2.png"
+                                alt="image_2"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_3.png"
+                                alt="image_3"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_4.png"
+                                alt="image_4"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_5.png"
+                                alt="image_5"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_6.png"
+                                alt="image_6"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_7.png"
+                                alt="image_7"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="view front">
+                            <img
+                                src="./assets/front.png"
+                                alt="front"
+                                id="front"
+                            />
+                        </div>
+                        <div class="view back">
+                            <img
+                                src="./assets/images_1/image_8.png"
+                                alt="image_8"
+                                id="back"
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </section>
 
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_1.png" alt="image_1" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_2.png" alt="image_2" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_3.png" alt="image_3" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_4.png" alt="image_4" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_5.png" alt="image_5" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_6.png" alt="image_6" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_7.png" alt="image_7" id="back">
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="view front">
-                        <img src="./assets/front.png" alt="front" id="front">
-                    </div>
-                    <div class="view back">
-                        <img src="./assets/images_1/image_8.png" alt="image_8" id="back">
-                    </div>
-                </li>
-            </ul>
-        </section>
+            <section class="progress">
+                <p class="timer"></p>
+                <p class="cardsNumber"></p>
+                <button id="refresh">Atualizar</button>
+            </section>
+        </main>
 
-        <section class="progress">
-            <p class="timer"></p>
-            <p class="cardsNumber"></p>
-            <button id="refresh">Atualizar</button>
-        </section>
-    </main>
+        <footer>
+            <p>RONALDO COSTA</p>
+        </footer>
 
-    <footer>
-        <p>RONALDO COSTA</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>

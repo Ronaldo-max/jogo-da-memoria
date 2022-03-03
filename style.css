@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
     --dark-blue: #6fd3fa;
-    --white: #FFFFFF;
+    --white: #ffffff;
     --blue: #dafff0;
     --shadow: #8f9699;
     --balck: #000000;
@@ -14,9 +14,16 @@
     box-sizing: border-box;
 }
 
-body, header, #audio, main,
-.container, .cards, .card,
-.view, .progress, footer {
+body,
+header,
+main,
+footer,
+#audio,
+.container,
+.cards,
+.card,
+.view,
+.progress {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +34,6 @@ body {
     width: 100%;
     min-height: 100vh;
     max-height: 100%;
-
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -39,7 +45,7 @@ header {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--balck);
 }
 
@@ -48,7 +54,7 @@ h1 {
     background-color: var(--white);
     width: 3rem;
     height: 3rem;
-    box-shadow: 0 3px 10px var(--shadow);
+    box-shadow: 0 1px 5px var(--shadow);
     border-radius: 15px;
 }
 
@@ -130,7 +136,8 @@ main {
     box-shadow: 0 3px 10px var(--shadow);
 }
 
-.view.back img, .view.front img {
+.view.back img,
+.view.front img {
     width: 4rem;
 }
 
@@ -158,7 +165,7 @@ main {
 }
 
 .progress p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 700;
 }
@@ -168,8 +175,7 @@ main {
     background-color: var(--dark-blue);
     border: 2px solid var(--balck);
     border-radius: 3px;
-
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
@@ -187,7 +193,7 @@ footer {
 }
 
 footer p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: var(--balck);
