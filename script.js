@@ -3,7 +3,7 @@ const time = document.querySelector(".timer");
 const completeCardTag = document.querySelector(".cardsNumber")
 const buttonRefresh = document.querySelector("button")
 
-let timer = 25;
+let timer = 30;
 let timerFunc = timer;
 let firstCard;
 let secondCard;
