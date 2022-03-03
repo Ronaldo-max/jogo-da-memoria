@@ -125,11 +125,11 @@ function upgradeDeck() {
         img.src = `./assets/images_${pastNumber}/image_${images[index]}.png`;
         card.addEventListener("click", moveCard);
     });
-
-    autoPlayAudio = setInterval(() => {
-        playAudio();
-    }, 100);
 }
+
+autoPlayAudio = setInterval(() => {
+    playAudio();
+}, 100);
 
 upgradeDeck();
 
