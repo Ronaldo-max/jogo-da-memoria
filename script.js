@@ -1,15 +1,38 @@
 const cards = document.querySelectorAll(".card");
+const time = document.querySelector(".timer");
+const completeCardTag = document.querySelector(".cardsNumber")
+const buttonRefresh = document.querySelector("button")
 
+let timer = 25;
+let timerFunc = timer;
 let firstCard;
 let secondCard;
-
 let disableCards = false;
-
 let count = 0;
+let play = false;
+let timerInterval;
+let completeCard = 0;
+
+function moveCardTimer() {
+    if(timerFunc <= 0) {
+        return clearInterval(timerInterval);
+    }
+
+    timerFunc--;
+    time.innerHTML = "Timer: " + timerFunc;
+}
 
 function moveCard(e) {
+    if(!play) {
+        play = true;
+
+        timerInterval = setInterval(moveCardTimer, 1000);
+    }
     let moveClick = e.target;
-    if (moveClick !== firstCard && !disableCards) {
+
+    if (moveClick !== firstCard && !disableCards && timerFunc > 0) {
+        completeCard++;
+        completeCardTag.innerHTML = "Cards: " + completeCard;
         moveClick.classList.add("move");
         if (!firstCard) {
             return firstCard = moveClick;
@@ -28,10 +51,8 @@ function setCards(img1, img2) {
     if (img1 === img2) {
         count++;
 
-        if (count == 8) {
-            setTimeout(() => {
-                return upgradeDeck();
-            }, 1000);
+        if (count == 8 && timerFunc > 0) {
+            return clearInterval(timerInterval);
         }
 
         firstCard.removeEventListener("click", moveCard);
@@ -54,9 +75,15 @@ function setCards(img1, img2) {
 }
 
 function upgradeDeck() {
+    timerFunc = timer;
+    time.innerHTML = "Timer: " + timerFunc;
+    clearInterval(timerInterval);
+    completeCard = 0;
+    completeCardTag.innerHTML = "Cards: " + completeCard;
     count = 0;
     firstCard = secondCard = "";
     disableCards = false;
+    play = false;
 
     let images = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
     images.sort(() => Math.random() > 0.5 ? 1 : -1);
@@ -75,6 +102,8 @@ function upgradeDeck() {
 }
 
 upgradeDeck();
+
+buttonRefresh.addEventListener("click", upgradeDeck)
 
 cards.forEach((card) => {
     card.addEventListener("click", moveCard);

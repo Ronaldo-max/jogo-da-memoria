@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,12 @@
     <title>Jogo da Memoria</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <main>
-        <h1>JOGO DA MEMÓRIA</h1>
 
+<body>
+    <header>
+        <h1>JOGO DA MEMÓRIA</h1>
+    </header>
+    <main>
         <section class="container">
             <ul class="cards">
                 <li class="card">
@@ -77,7 +80,7 @@
                         <img src="./assets/images_1/image_8.png" alt="image_8" id="back">
                     </div>
                 </li>
-    
+
                 <li class="card">
                     <div class="view front">
                         <img src="./assets/front.png" alt="front" id="front">
@@ -144,8 +147,19 @@
                 </li>
             </ul>
         </section>
+
+        <section class="progress">
+            <p class="timer">Timer:</p>
+            <p class="cardsNumber">Cards:</p>
+            <button>Atualizar</button>
+        </section>
     </main>
+
+    <footer>
+        <p>Ronaldo Costa</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

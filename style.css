@@ -4,7 +4,7 @@
     --dark-blue: #6fd3fa;
     --white: #FFFFFF;
     --blue: #dafff0;
-    --shadow: #adadad;
+    --shadow: #8f9699;
     --balck: #000000;
 }
 
@@ -14,7 +14,9 @@
     box-sizing: border-box;
 }
 
-body, main, .container, .cards, .card, .view {
+body, header, main,
+.container, .cards, .card,
+.view, .progress, footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,24 +27,31 @@ body {
     width: 100%;
     min-height: 100vh;
     max-height: 100%;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--balck);
+    margin: 1rem 0;
 }
 
 main {
     flex-direction: column;
 }
 
-h1 {
-    font-family: 'Roboto', Verdana, Tahoma, sans-serif;
-    color: var(--balck);
-    margin-bottom: 1rem;
-}
-
 .container {
     background-color: var(--dark-blue);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1rem;
-    width: 500px;
-    height: 500px;
+    width: 460px;
+    height: 460px;
 }
 
 .cards {
@@ -120,6 +129,51 @@ h1 {
     transition: ease-in-out 300ms;
 }
 
+.progress {
+    width: 460px;
+    height: 50px;
+    background-color: var(--dark-blue);
+    margin-top: 20px;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.progress p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.progress button {
+    padding: 5px 15px;
+    background-color: var(--dark-blue);
+    border: 2px solid var(--balck);
+    border-radius: 3px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.progress button:active {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+footer {
+    width: 460px;
+    border-top: 2px solid var(--dark-blue);
+    margin-top: 1em;
+    padding: 10px 0 10px 0;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--balck);
+}
+
 @media (max-width: 550px) {
     main {
         transition: ease-in-out 2s linear;
@@ -142,6 +196,14 @@ h1 {
     .view.back img,
     .view.front img {
         width: 3rem;
+    }
+
+    .progress {
+        width: 400px;
+    }
+
+    footer {
+        width: 400px;
     }
 }
 
@@ -166,5 +228,13 @@ h1 {
     .view.back img,
     .view.front img {
         width: 2.5rem;
+    }
+
+    .progress {
+        width: 300px;
+    }
+
+    footer {
+        width: 300px;
     }
 }
