@@ -1,7 +1,13 @@
 const cards = document.querySelectorAll(".card");
 const time = document.querySelector(".timer");
-const completeCardTag = document.querySelector(".cardsNumber")
-const buttonRefresh = document.querySelector("button")
+const completeCardTag = document.querySelector(".cardsNumber");
+const buttonRefresh = document.querySelector("#refresh");
+
+const buttonAudio = document.querySelector("#audio");
+const audio = document.querySelector("audio");
+
+const imagePlay = document.getElementById("play");
+const imagePause = document.getElementById("pause")
 
 let timer = 30;
 let timerFunc = timer;
@@ -9,9 +15,35 @@ let firstCard;
 let secondCard;
 let disableCards = false;
 let count = 0;
-let play = false;
+let playGame = false;
 let timerInterval;
 let completeCard = 0;
+
+let countAudio = 0;
+
+function playAudio() {
+    audio.play();
+    countAudio = 1;
+    audio.loop = true;
+
+    imagePause.style.display = "none";
+    imagePlay.style.display = "flex";
+}
+
+function playAndPause() {
+    if(countAudio == 1) {
+        audio.pause();
+        audio.loop = false;
+        audio.currentTime = 0;
+
+        imagePause.style.display = "flex";
+        imagePlay.style.display = "none";
+
+        countAudio = 0;
+    } else {
+        playAudio();
+    }
+}
 
 function moveCardTimer() {
     if(timerFunc <= 0) {
@@ -23,8 +55,8 @@ function moveCardTimer() {
 }
 
 function moveCard(e) {
-    if(!play) {
-        play = true;
+    if(!playGame) {
+        playGame = true;
 
         timerInterval = setInterval(moveCardTimer, 1000);
     }
@@ -83,7 +115,7 @@ function upgradeDeck() {
     count = 0;
     firstCard = secondCard = "";
     disableCards = false;
-    play = false;
+    playGame = false;
 
     let images = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
     images.sort(() => Math.random() > 0.5 ? 1 : -1);
@@ -103,7 +135,10 @@ function upgradeDeck() {
 
 upgradeDeck();
 
-buttonRefresh.addEventListener("click", upgradeDeck)
+setTimeout (() => {playAudio()}, 500);
+
+buttonRefresh.addEventListener("click", upgradeDeck);
+buttonAudio.addEventListener("click", playAndPause);
 
 cards.forEach((card) => {
     card.addEventListener("click", moveCard);

@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-body, header, main,
+body, header, #audio, main,
 .container, .cards, .card,
 .view, .progress, footer {
     display: flex;
@@ -33,13 +33,32 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 460px;
+    gap: 2rem;
+    margin: 10px 0;
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
     color: var(--balck);
-    margin: 1rem 0;
+}
+
+#audio {
+    border: none;
+    background-color: var(--white);
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0 3px 10px var(--shadow);
+    border-radius: 15px;
+}
+
+#audio:active {
+    opacity: 0.7;
+}
+
+#audio img {
+    width: 2rem;
+    height: 2rem;
 }
 
 main {
@@ -121,19 +140,19 @@ main {
 
 .card.move .view.front {
     transform: rotateY(180deg);
-    transition: ease-in-out 300ms;
+    transition: ease-in-out 250ms;
 }
 
 .card.move .view.back {
     transform: rotateY(0);
-    transition: ease-in-out 300ms;
+    transition: ease-in-out 250ms;
 }
 
 .progress {
     width: 460px;
     height: 50px;
     background-color: var(--dark-blue);
-    margin-top: 20px;
+    margin-top: 5px;
     border-radius: 15px;
     justify-content: space-evenly;
 }
@@ -141,7 +160,7 @@ main {
 .progress p {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .progress button {
@@ -162,19 +181,28 @@ main {
 
 footer {
     width: 460px;
-    border-top: 2px solid var(--dark-blue);
+    border-top: 2px solid var(--balck);
     margin-top: 1em;
     padding: 10px 0 10px 0;
 }
 
 footer p {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 700;
     color: var(--balck);
 }
 
 @media (max-width: 550px) {
+    header {
+        width: 400px;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
     main {
         transition: ease-in-out 2s linear;
     }
@@ -210,6 +238,10 @@ footer p {
 @media (max-width: 350px) {
     body {
         background-color: var(--blue);
+    }
+
+    header {
+        width: 300px;
     }
 
     .container {

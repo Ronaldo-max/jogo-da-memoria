@@ -12,6 +12,15 @@
 <body>
     <header>
         <h1>JOGO DA MEMÓRIA</h1>
+
+        <button id="audio">
+            <img src="./assets/play.png" alt="play" id="play">
+            <img src="./assets/pause.png" alt="pause" id="pause" style="display: none;">
+            <audio src="./audio/background.mp3"></audio>
+        </button>
+        <audio>
+            <source src="./audio/background.mp3" type="audio/mp3">
+        </audio>
     </header>
     <main>
         <section class="container">
@@ -151,12 +160,12 @@
         <section class="progress">
             <p class="timer"></p>
             <p class="cardsNumber"></p>
-            <button>Atualizar</button>
+            <button id="refresh">Atualizar</button>
         </section>
     </main>
 
     <footer>
-        <p>Ronaldo Costa</p>
+        <p>RONALDO COSTA</p>
     </footer>
 
     <script src="script.js"></script>
