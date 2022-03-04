@@ -55,7 +55,7 @@ const cardFunction = {
             return clearInterval(timerInterval);
         }
         timerAll--;
-        time.innerHTML = "Tempo: " + timerAll;
+        time.innerHTML = "TEMPO: " + timerAll;
     },
 
     moveCard(e) {
@@ -67,7 +67,7 @@ const cardFunction = {
 
         if (moveClick !== firstCard && !disableCards && timerAll > 0) {
             completeCard++;
-            completeCardTag.innerHTML = "Cliques: " + completeCard;
+            completeCardTag.innerHTML = "CLIQUES: " + completeCard;
             moveClick.classList.add("move");
             if (!firstCard) {
                 return (firstCard = moveClick);
@@ -132,10 +132,10 @@ const actionsButtons = {
 
     upgradeDeck() {
         timerAll = timer;
-        time.innerHTML = "Tempo: " + timerAll;
+        time.innerHTML = "TEMPO: " + timerAll;
         clearInterval(timerInterval);
         completeCard = 0;
-        completeCardTag.innerHTML = "Cliques: " + completeCard;
+        completeCardTag.innerHTML = "CLIQUES: " + completeCard;
         count = 0;
         firstCard = secondCard = "";
         disableCards = false;
@@ -167,7 +167,7 @@ cards.forEach((card) => {
 
 const squares = document.querySelector("div.squares");
 
-for(let i = 0; i < 11; i++) {
+for(let i = 0; i < 15; i++) {
     const div = document.createElement("div");
 
     const random = (min, max) => Math.random() * (max - min) + min;
