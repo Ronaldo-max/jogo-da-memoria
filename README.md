@@ -4,9 +4,9 @@
 
 ## Tecnologias
 
-- HTML
-- CSS
-- JAVASCRIPT
+-   HTML
+-   CSS
+-   JAVASCRIPT
 
 ## Imagens e audio
 
