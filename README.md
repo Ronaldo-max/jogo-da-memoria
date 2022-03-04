@@ -1,6 +1,6 @@
 # JOGO DA MEMÓRIA
 
-<img src="" alt="jogo da memória" />
+<img src="background.gif" alt="jogo da memória" />
 
 ## Tecnologias
 
