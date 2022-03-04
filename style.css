@@ -67,6 +67,10 @@ h1 {
     height: 2rem;
 }
 
+#buttonAudio img#play {
+    display: none;
+}
+
 main {
     flex-direction: column;
 }
@@ -89,11 +93,9 @@ main {
 
 .card {
     list-style: none;
-    padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
     position: relative;
-    perspective: 1000px;
     width: 6rem;
     height: 6rem;
 }

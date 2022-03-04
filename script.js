@@ -1,3 +1,34 @@
+function createElementeHtml() {
+    let divFront = `
+        <div class="view front">
+            <img src="./assets/front.png" alt="front" class="frontImage" />
+        </div>
+    `;
+
+    let divBack = `
+        <div class="view back">
+            <img src="./assets/images_1/image_1.png" alt="image back" class="backImage"
+            />
+        </div>
+    `;
+
+    let li = `
+        <li class="card">
+            ${divFront}
+            ${divBack}
+        </li>
+    `;
+
+    let codeHtml = `
+        ${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}
+    `;
+
+    let ul = document.querySelector("ul");
+    ul.innerHTML = codeHtml;
+}
+
+createElementeHtml();
+
 const cards = document.querySelectorAll(".card");
 const time = document.querySelector(".timer");
 const completeCardTag = document.querySelector(".cardsNumber");
@@ -44,8 +75,8 @@ const cardFunction = {
 
             secondCard = moveClick;
             disableCards = true;
-            let firstCardImg = firstCard.querySelector("img#back").src;
-            let secondCardImg = secondCard.querySelector("img#back").src;
+            let firstCardImg = firstCard.querySelector("img.backImage").src;
+            let secondCardImg = secondCard.querySelector("img.backImage").src;
 
             cardValueImage.setCards(firstCardImg, secondCardImg);
         }
@@ -104,7 +135,7 @@ const actionsButtons = {
         time.innerHTML = "Tempo: " + timerAll;
         clearInterval(timerInterval);
         completeCard = 0;
-        completeCardTag.innerHTML = "Cartas: " + completeCard;
+        completeCardTag.innerHTML = "Cliques: " + completeCard;
         count = 0;
         firstCard = secondCard = "";
         disableCards = false;
@@ -113,14 +144,12 @@ const actionsButtons = {
         let images = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
         images.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
-        let past = [1, 2, 3, 4, 5, 6, 7, 8];
-        past = Math.floor(Math.random() * 9);
-
+        let past = Math.floor(Math.random() * 9);
         let pastNumber = past === 0 ? 1 : past;
 
         cards.forEach((card, index) => {
             card.classList.remove("move");
-            let img = card.querySelector("#back");
+            let img = card.querySelector(".backImage");
             img.src = `./assets/images_${pastNumber}/image_${images[index]}.png`;
             card.addEventListener("click", cardFunction.moveCard);
         });
