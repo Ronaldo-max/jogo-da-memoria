@@ -113,20 +113,23 @@ const cardValueImage = {
 };
 
 const actionsButtons = {
+    playAudio() {
+        audio.play();
+        countAudio = 1;
+        audio.loop = true;
+        imagePause.style.display = "flex";
+        imagePlay.style.display = "none";
+    },
     playAndPause() {
         if (countAudio == 1) {
             audio.pause();
             countAudio = 0;
             audio.loop = false;
             audio.currentTime = 0;
-            imagePause.style.display = "flex";
-            imagePlay.style.display = "none";
-        } else {
-            audio.play();
-            countAudio = 1;
-            audio.loop = true;
             imagePause.style.display = "none";
             imagePlay.style.display = "flex";
+        } else {
+            actionsButtons.playAudio();
         }
     },
 
@@ -164,6 +167,14 @@ buttonAudio.addEventListener("click", actionsButtons.playAndPause);
 cards.forEach((card) => {
     card.addEventListener("click", cardFunction.moveCard);
 });
+
+const buttonModal = document.getElementById("button-modal");
+buttonModal.addEventListener("click", () => {
+    document.getElementById("modal").style.display ="none";
+    actionsButtons.playAudio()
+})
+
+// SQUARES
 
 const squares = document.querySelector("div.squares");
 
