@@ -24,7 +24,7 @@ const cardFunction = {
             return clearInterval(timerInterval);
         }
         timerAll--;
-        time.innerHTML = "Timer: " + timerAll;
+        time.innerHTML = "Tempo: " + timerAll;
     },
 
     moveCard(e) {
@@ -36,7 +36,7 @@ const cardFunction = {
 
         if (moveClick !== firstCard && !disableCards && timerAll > 0) {
             completeCard++;
-            completeCardTag.innerHTML = "Cards: " + completeCard;
+            completeCardTag.innerHTML = "Cliques: " + completeCard;
             moveClick.classList.add("move");
             if (!firstCard) {
                 return (firstCard = moveClick);
