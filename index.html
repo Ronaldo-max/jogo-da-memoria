@@ -11,21 +11,18 @@
     <body>
         <header>
             <h1>JOGO DA MEMÓRIA</h1>
-
-            <button id="audio">
-                <img src="./assets/play.png" alt="play" id="play" />
+            <audio src="./audio/background.mp3" loop></audio>
+            <button id="buttonAudio">
                 <img
-                    src="./assets/pause.png"
-                    alt="pause"
-                    id="pause"
+                    src="./assets/play.png"
+                    alt="play"
+                    id="play"
                     style="display: none"
                 />
-                <audio src="./audio/background.mp3"></audio>
+                <img src="./assets/pause.png" alt="pause" id="pause" />
             </button>
-            <audio>
-                <source src="./audio/background.mp3" type="audio/mp3" />
-            </audio>
         </header>
+
         <main>
             <section class="container">
                 <ul class="cards">
