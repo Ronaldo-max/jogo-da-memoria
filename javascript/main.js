@@ -1,34 +1,3 @@
-function createElementeHtml() {
-    let divFront = `
-        <div class="view front">
-            <img src="./assets/front.png" alt="front" class="frontImage" />
-        </div>
-    `;
-
-    let divBack = `
-        <div class="view back">
-            <img src="./assets/images_1/image_1.png" alt="image back" class="backImage"
-            />
-        </div>
-    `;
-
-    let li = `
-        <li class="card">
-            ${divFront}
-            ${divBack}
-        </li>
-    `;
-
-    let codeHtml = `
-        ${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}${li}
-    `;
-
-    let ul = document.querySelector("ul");
-    ul.innerHTML = codeHtml;
-}
-
-createElementeHtml();
-
 const cards = document.querySelectorAll(".card");
 const time = document.querySelector(".timer");
 const completeCardTag = document.querySelector(".cardsNumber");
@@ -170,33 +139,6 @@ cards.forEach((card) => {
 
 const buttonModal = document.getElementById("button-modal");
 buttonModal.addEventListener("click", () => {
-    document.getElementById("modal").style.display ="none";
+    document.getElementById("modal").style.display = "none";
     actionsButtons.playAudio()
 })
-
-// SQUARES
-
-const squares = document.querySelector("div.squares");
-
-for(let i = 0; i < 15; i++) {
-    const div = document.createElement("div");
-
-    const random = (min, max) => Math.random() * (max - min) + min;
-
-    const size = Math.floor(random(10, 120));
-    const position = random(1, 99);
-    const delay = random(5, 0.1);
-    const duration = random(24, 12)
-
-    div.style.width = `${size}px`;
-    div.style.height = `${size}px`;
-    div.style.bottom = `-${size}px`;
-
-    div.style.left = `${position}%`;
-
-    div.style.animationDelay = `${delay}s`;
-    div.style.animationDuration = `${duration}s`;
-    div.style.animationTimingFunction = `cubic-bezier(${Math.random},${Math.random},${Math.random},${Math.random})`
-
-    squares.appendChild(div);
-}
