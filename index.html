@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.svg"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Jogo da Memória</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Jogo da Memória</title>
-</head>
-
-<body>
-    <header>
-        <h1>JOGO DA MEMÓRIA</h1>
-        <audio src="./audio/background.mp3" loop></audio>
-        <button id="buttonAudio">
-            <img src="./assets/play.png" alt="play" id="play" />
-            <img src="./assets/pause.png" alt="pause" id="pause" />
-        </button>
-    </header>
-
-    <main>
-        <section class="container">
-            <ul class="cards"></ul>
-        </section>
-
-        <section class="progress">
-            <p class="timer"></p>
-            <p class="cardsNumber"></p>
-            <button id="refresh">Atualizar</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>RONALDO COSTA</p>
-    </footer>
-
-    <div class="squares"></div>
-
-    <div id="modal">
-        <div class="container-modal">
-            <p>Play Game</p>
-            <button id="button-modal">
-                <img src="./assets/play.png" alt="play game">
+    <body>
+        <header>
+            <h1>JOGO DA MEMÓRIA</h1>
+            <audio src="./audio/background.mp3" loop></audio>
+            <button id="buttonAudio">
+                <img src="./assets/play.png" alt="play" id="play" />
+                <img src="./assets/pause.png" alt="pause" id="pause" />
             </button>
+        </header>
+
+        <main>
+            <section class="container">
+                <ul class="cards"></ul>
+            </section>
+
+            <section class="progress">
+                <p class="timer"></p>
+                <p class="cardsNumber"></p>
+                <button id="refresh">Atualizar</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>RONALDO COSTA</p>
+        </footer>
+
+        <div class="squares"></div>
+
+        <div id="modal">
+            <div class="container-modal">
+                <p>Play Game</p>
+                <button id="button-modal">
+                    <img src="./assets/play.png" alt="play game" />
+                </button>
+            </div>
         </div>
-    </div>
 
-    <script src="./javascript/createElementeHtml.js"></script>
-    <script src="./javascript/main.js"></script>
-    <script src="./javascript/squares.js"></script>
-</body>
-
+        <script src="./javascript/createElementeHtml.js"></script>
+        <script src="./javascript/main.js"></script>
+        <script src="./javascript/squares.js"></script>
+    </body>
 </html>

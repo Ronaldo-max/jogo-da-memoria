@@ -140,5 +140,5 @@ cards.forEach((card) => {
 const buttonModal = document.getElementById("button-modal");
 buttonModal.addEventListener("click", () => {
     document.getElementById("modal").style.display = "none";
-    actionsButtons.playAudio()
-})
+    actionsButtons.playAudio();
+});
