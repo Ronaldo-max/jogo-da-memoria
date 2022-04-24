@@ -1,12 +1,12 @@
 /* RODAPÉ */
 
 footer {
-    @extend .flex;
-    width: 460px;
-    padding: 10px 0 10px 0;
+  @extend .flex;
+  width: 460px;
+  padding: 10px 0 10px 0;
 
-    p {
-        @extend .font-primary;
-        font-size: 14px;
-    }
+  p {
+    @extend .font-primary;
+    font-size: 14px;
+  }
 }

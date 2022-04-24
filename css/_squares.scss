@@ -1,33 +1,33 @@
 /* SQUARES */
 
 .squares {
-    width: 100%;
+  width: 100%;
 
-    div {
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.199);
-        display: block;
-        position: fixed;
-        bottom: -40px;
-        animation: up 2s infinite alternate;
-        z-index: -1;
-    }
+  div {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.199);
+    display: block;
+    position: fixed;
+    bottom: -40px;
+    animation: up 2s infinite alternate;
+    z-index: -1;
+  }
 
-    @keyframes up {
-        0% {
-            transform: translateY(0);
-            opacity: 0;
-        }
-        30% {
-            opacity: 1;
-        }
-        70% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(-100vh) rotate(960deg);
-        }
+  @keyframes up {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
     }
+    30% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100vh) rotate(960deg);
+    }
+  }
 }

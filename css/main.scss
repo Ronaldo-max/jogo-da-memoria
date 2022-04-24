@@ -5,30 +5,30 @@ $shadow: #8f9699;
 $dark: #201f24;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .font-primary {
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: $dark;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: $dark;
 }
 
 body {
-    @extend .flex;
-    background-color: $dark-blue;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
+  @extend .flex;
+  background-color: $dark-blue;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
 }
 
 @import "header";
@@ -38,92 +38,92 @@ body {
 @import "modal";
 
 @media (max-width: 550px) {
-    header {
-        width: 400px;
+  header {
+    width: 400px;
+    gap: 1rem;
+
+    h1 {
+      font-size: 25px;
+    }
+  }
+
+  main {
+    transition: ease-in-out 2s linear;
+
+    .container {
+      width: 400px;
+      height: 400px;
+
+      .cards {
         gap: 1rem;
 
-        h1 {
-            font-size: 25px;
+        .card {
+          width: 4.2rem;
+          height: 4.2rem;
         }
+      }
+
+      .view.back img,
+      .view.front img {
+        width: 3rem;
+      }
     }
 
-    main {
-        transition: ease-in-out 2s linear;
-
-        .container {
-            width: 400px;
-            height: 400px;
-
-            .cards {
-                gap: 1rem;
-
-                .card {
-                    width: 4.2rem;
-                    height: 4.2rem;
-                }
-            }
-
-            .view.back img,
-            .view.front img {
-                width: 3rem;
-            }
-        }
-
-        .progress {
-            width: 400px;
-        }
+    .progress {
+      width: 400px;
     }
+  }
 
-    .container-modal {
-        width: 90%;
-    }
+  .container-modal {
+    width: 90%;
+  }
 
-    footer {
-        width: 400px;
-    }
+  footer {
+    width: 400px;
+  }
 }
 
 @media (max-width: 360px) {
-    header {
-        width: 100%;
-        min-width: 320px;
-        padding: 0 20px;
-    }
+  header {
+    width: 100%;
+    min-width: 320px;
+    padding: 0 20px;
+  }
 
-    main {
-        width: 100%;
-        min-width: 320px;
-        padding: 0 20px;
+  main {
+    width: 100%;
+    min-width: 320px;
+    padding: 0 20px;
 
-        .container {
-            width: 100%;
-            height: 300px;
+    .container {
+      width: 100%;
+      height: 300px;
 
-            .cards {
-                gap: 0.5rem;
+      .cards {
+        gap: 0.5rem;
 
-                .card {
-                    width: 3.5rem;
-                    height: 3.5rem;
+        .card {
+          width: 3.5rem;
+          height: 3.5rem;
 
-                    img {
-                        width: 2.5rem;
-                    }
-                }
-            }
+          img {
+            width: 2.5rem;
+          }
         }
-
-        .progress {
-            width: 100%;
-        }
+      }
     }
 
-    .container-modal p {
-        font-size: 65px;
+    .progress {
+      width: 100%;
     }
+  }
 
-    footer {
-        width: 100%;
-        min-width: 320px;
-    }
+  .container-modal p {
+    font-size: 65px;
+  }
+
+  footer {
+    width: 100%;
+    min-width: 320px;
+  }
 }
